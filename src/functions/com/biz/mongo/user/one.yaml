@@ -1,0 +1,11 @@
+summary: Fetch User
+tasks:
+  - id: mongo_user_one
+    fn: com.gs.datastore
+    args:
+      datasource: mongo
+      data:
+        where:
+          id: <% inputs.params.id %>
+      config:
+        method: user.findUnique

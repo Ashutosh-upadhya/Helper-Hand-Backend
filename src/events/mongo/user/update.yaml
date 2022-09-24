@@ -1,0 +1,36 @@
+/mongo/user/:id.http.put:
+  summary: Update a User
+  description: Update User from database
+  fn: com.biz.mongo.user.update
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            createdAt:
+              type: string
+              format: date-time
+            firstNmae:
+              type: string
+            middleName:
+              type: string
+            lastName:
+              type: string
+            aadharNumber:
+              type: string
+            age:
+              type: string
+            email:
+              type: string
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object

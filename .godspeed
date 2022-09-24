@@ -1,0 +1,1 @@
+{"projectName":"Ashutosh","mongodb":true,"mongoDbName":"test","postgresql":false,"kafka":false,"elasticsearch":false,"redis":false,"svcPort":3000,"mongoDb1Port":27017,"mongoDb2Port":27018,"mongoDb3Port":27019}

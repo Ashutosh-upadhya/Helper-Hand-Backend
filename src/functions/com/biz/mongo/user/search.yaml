@@ -1,0 +1,9 @@
+summary: Fetch many User
+tasks:
+  - id: mongo_user_search
+    fn: com.gs.datastore
+    args:
+      datasource: mongo
+      data: <% inputs.body %>
+      config:
+        method: User.findMany

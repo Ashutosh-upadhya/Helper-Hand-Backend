@@ -1,0 +1,11 @@
+summary: Fetch Post
+tasks:
+  - id: mongo_post_one
+    fn: com.gs.datastore
+    args:
+      datasource: mongo
+      data:
+        where:
+          id: <% inputs.params.id %>
+      config:
+        method: post.findUnique

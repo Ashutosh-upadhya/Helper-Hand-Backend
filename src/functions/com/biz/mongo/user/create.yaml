@@ -1,0 +1,10 @@
+summary: Create User
+tasks:
+  - id: mongo_user_create
+    fn: com.gs.datastore
+    args:
+      datasource: mongo
+      data:
+        data: <% inputs.body %>
+      config:
+        method: user.create

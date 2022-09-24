@@ -1,0 +1,27 @@
+/mongo/post/:id.http.put:
+  summary: Update a Post
+  description: Update Post from database
+  fn: com.biz.mongo.post.update
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            location:
+              type: string
+            destination:
+              type: string
+            description:
+              type: string
+  params:
+    - name: id
+      in: path
+      required: true
+      schema:
+        type: string
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object

@@ -1,0 +1,11 @@
+summary: Delete User
+tasks:
+  - id: mongo_user_delete
+    fn: com.gs.datastore
+    args:
+      datasource: mongo
+      data:
+        where:
+          id: <% inputs.params.id %>
+      config:
+        method: user.delete

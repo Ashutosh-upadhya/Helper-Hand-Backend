@@ -1,0 +1,12 @@
+summary: Update Post
+tasks:
+  - id: mongo_post_update
+    fn: com.gs.datastore
+    args:
+      datasource: mongo
+      data:
+        where:
+          id: <% inputs.params.id %>
+        data: <% inputs.body %>
+      config:
+        method: Post.update

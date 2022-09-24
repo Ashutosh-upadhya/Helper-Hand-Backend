@@ -1,0 +1,7 @@
+# Ignore everything
+*
+!/config
+!/src
+!package.json
+!tsconfig.json
+!/typings

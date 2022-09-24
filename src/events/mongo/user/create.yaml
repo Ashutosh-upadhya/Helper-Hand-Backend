@@ -1,0 +1,30 @@
+/mongo/user.http.post:
+  summary: Create a new User
+  description: Create User from database
+  fn: com.biz.mongo.user.create
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            createdAt:
+              type: string
+              format: date-time
+            firstNmae:
+              type: string
+            middleName:
+              type: string
+            lastName:
+              type: string
+            aadharNumber:
+              type: string
+            age:
+              type: string
+            email:
+              type: string
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object

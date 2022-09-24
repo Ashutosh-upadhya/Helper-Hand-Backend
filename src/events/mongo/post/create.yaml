@@ -1,0 +1,21 @@
+/mongo/post.http.post:
+  summary: Create a new Post
+  description: Create Post from database
+  fn: com.biz.mongo.post.create
+  body:
+    content:
+      application/json:
+        schema:
+          type: object
+          properties:
+            location:
+              type: string
+            destination:
+              type: string
+            description:
+              type: string
+  responses:
+    content:
+      application/json:
+        schema:
+          type: object
